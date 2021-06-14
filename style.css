@@ -1,90 +1,101 @@
 * {
     box-sizing: border-box;
-  }
+}
 
-  
-  
-  body {
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #212121;
-    
-  }
+}
 
-  /*Hiding scrollbar for Chromium*/
-  body::-webkit-scrollbar {
+
+/*Hiding scrollbar for Chromium*/
+
+body::-webkit-scrollbar {
     display: none;
 }
+
+
 /*Hiding scrollbar for Gecko by Mozilla*/
+
 #element {
     scrollbar-width: none;
 }
 
-  h1{
+h1 {
     font-family: 'Arial white', arial;
     padding-top: 5%;
-  }
-  
-  /* Float four columns side by side */
-  .columnn  {
+}
+
+
+/* Float four columns side by side */
+
+.columnn {
     float: left;
     width: 75%;
     padding: 0 10px;
-    padding-top: 0%;
+    padding-top: 3%;
     padding-left: 2%;
-  }
-  
-  .column1 {
+}
+
+.column1 {
     float: right;
     width: 25%;
-    padding: 0 ;
+    padding: 0;
     padding-top: 0%;
     padding-left: 3%;
-  }
+}
 
-  /* Remove extra left and right margins, due to padding in columns */
-  .roww {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .roww:after {
+
+/* Remove extra left and right margins, due to padding in columns */
+
+.roww {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.roww:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Style the counter cards */
-  .cardd {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 16px;
+}
+
+
+/* Style the counter cards */
+
+.cardd {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding: 10px;
     text-align: left;
     background-color: #000000;
     color: white;
     transition: 0.3s;
-    height: 250px;
+    height: auto;
     border-radius: 5px;
-  }
-  
-  .cardd:hover {
+}
+
+.cardd:hover {
     box-shadow: 0 8px 16px 0 rgba(156, 156, 156, 0.2);
-  }
+}
 
-  .jumbotron{
-      padding:2rem 1rem;
-      margin-bottom:2rem;
-      
-      border-radius:.3rem
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem
+}
+
+@media (min-width:576px) {
+    .jumbotron {
+        padding: 4rem 2rem
     }
-    
-    @media (min-width:576px){
-        .jumbotron{
-            padding:4rem 2rem
-        }
-    }
+}
 
-
-
-  .concard {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding-bottom: 10px;
+.concard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding-bottom: 30px;
     text-align: center;
     background-color: #000000;
     vertical-align: middle;
@@ -94,62 +105,81 @@
     width: auto;
     border-radius: 5px;
     overflow: hidden;
-  }
-  
-  .concard:hover {
-    box-shadow: 0 8px 16px 0 rgba(156, 156, 156, 0.2);
-  }
+}
 
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
+.concard:hover {
+    box-shadow: 0 8px 16px 0 rgba(156, 156, 156, 0.2);
+}
+
+.headcard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #000000;
+    vertical-align: middle;
+    color: white;
+    transition: 0.3s;
+    height: auto;
+    width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.headcard:hover {
+    box-shadow: 0 8px 16px 0 rgba(156, 156, 156, 0.2);
+}
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+
+@media screen and (max-width: 600px) {
     .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
     }
-  }
-  
-  #navbar-primary.navbar-default {
+}
+
+#navbar-primary.navbar-default {
     background: transparent;
     border: none;
     padding-top: 20%;
-    
-    
-  }
+}
 
-  .navbar-nav{
-      padding-top: 50px;
-  }
-    .navbar-nav { 
-      width: 100%;
-      text-align: center;
-    }
-    li {
-        display: inline-block;
-        float: none;
-    }
-        a{
-          padding-left: 30px;
-          padding-right: 30px;
-          font-family: 'Arial white', arial;
-          color: white;
-          text-decoration: none;
-          font-weight: bolder;
-          font-size: 25px;
-          font-style: italic;
-        }
+.navbar-nav {
+    padding-top: 50px;
+}
 
-        .obj{
-            padding-top: 30px;
-            word-wrap: break-word;
-            
-          font-family: 'Arial white', arial;
-          color: white;
-          text-decoration: none;
-          font-weight: bolder;
-          font-size: 25px;
-          font-style: italic;
-        }
-        
-        
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
 
+li {
+    display: inline-block;
+    float: none;
+}
+
+a {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Arial white', arial;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.obj {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    word-wrap: break-word;
+    font-family: 'Arial white', arial;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 25px;
+    font-style: italic;
+}
